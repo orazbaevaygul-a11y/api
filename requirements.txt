@@ -1,4 +1,8 @@
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
-asyncpg==0.29.0
 python-multipart==0.0.9
+
+# asyncpg o'rniga binary versiyasini ishlatamiz
+psycopg2-binary==2.9.9
+# yoki asyncpg ni majburan wheel bilan o'rnatish
+asyncpg==0.29.0 --no-binary :all:   # bu ishlamaydi, shuning uchun quyidagicha qilamiz
